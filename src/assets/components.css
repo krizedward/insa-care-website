@@ -1,0 +1,81 @@
+:root {
+  --warna-awal: #8DC07A;
+  --warna-akhir: #4A8C6F;
+  --gradasi-utama: linear-gradient(135deg, var(--warna-awal), var(--warna-akhir));
+
+  --warna-utama: #4A8C6F; /* untuk teks/border outline */
+  --warna-bahaya: #e74c3c;
+  --warna-abu: #6c757d;
+  --warna-putih: #F0F4F8;
+  --radius: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s, background-position 0.4s, box-shadow 0.2s;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Tombol gradasi */
+.btn-primary {
+  background-image: linear-gradient(135deg, #8DC07A, #4A8C6F, #8DC07A);
+  /* background-image: linear-gradient(135deg, #4A8C6F, #8DC07A, #4A8C6F); */
+  background-size: 200% 100%;
+  background-position: left center;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-position: right center;
+  box-shadow: 0 4px 12px rgba(74, 140, 111, 0.4);
+  color: var(--warna-putih);
+}
+
+/* Outline dengan border gradasi */
+.btn-outline {
+  color: var(--warna-akhir);
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(white, white),
+    var(--gradasi-utama);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-image: var(--gradasi-utama);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--warna-bahaya);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Ukuran */
+.btn-sm { padding: 0.3rem 0.8rem; font-size: 0.85rem; }
+.btn-lg { padding: 0.9rem 1.8rem; font-size: 1.15rem; }
+
+/* Lebar penuh */
+.btn-block { display: flex; width: 100%; }

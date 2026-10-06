@@ -1,0 +1,61 @@
+:root {
+  --warna-utama: #42b883;
+  --warna-teks: #2c3e50;
+  --radius: 8px;
+  /* INSA Navy : #1B2D6B */
+  /* Slate Blue : #4A5E8A */
+  /* Sage Dark : #4A8C6F */
+  /* Sage Light : #8DC07A */
+  /* Sage Pale : #E4F2E9 */
+  /* Cool White 1 : #F8F9FA */
+  /* Cool White 2 : #F0F4F8 */
+  /* --bs-primary: #42b883;
+  --bs-primary-rgb: 66, 184, 131; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F0F4F8;
+}
+/* css default vue */
+/* @import './base.css';
+
+#app {
+max-width: 1280px;
+margin: 0 auto;
+padding: 2rem;
+font-weight: normal;
+}
+
+a,
+.green {
+text-decoration: none;
+color: hsla(160, 100%, 37%, 1);
+transition: 0.4s;
+padding: 3px;
+}
+
+@media (hover: hover) {
+a:hover {
+background-color: hsla(160, 100%, 37%, 0.2);
+}
+}
+
+@media (min-width: 1024px) {
+body {
+display: flex;
+place-items: center;
+}
+
+#app {
+display: grid;
+grid-template-columns: 1fr 1fr;
+padding: 0 2rem;
+}
+} */
