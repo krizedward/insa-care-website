@@ -1,5 +1,6 @@
 <script setup>
-import NavBar from './components/Navbar.vue'
+import NavBar from './components/NavBar.vue'
+import FooterBar from './components/FooterBar.vue'
 </script>
 
 <!-- <template>
@@ -14,9 +15,12 @@ import NavBar from './components/Navbar.vue'
 <template>
   <NavBar />
 
-  <main class="container py-4">
+  <!-- <main class="container py-4"> -->
+  <main>
     <RouterView />
   </main>
+  
+  <FooterBar />
 </template>
 
 <style scoped>
