@@ -1,138 +1,65 @@
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import { Modal } from 'bootstrap'
+import PageHeader from '../components/PageHeaderSection.vue'
 
-// --- Counter ---
-const jumlah = ref(0)
-
-// --- Form ---
-const form = ref({ nama: '', email: '', pesan: '' })
-const sudahKirim = ref(false)
-
-const error = computed(() => ({
-  nama: form.value.nama.trim() === '' ? 'Nama wajib diisi' : '',
-  email: !/^\S+@\S+\.\S+$/.test(form.value.email) ? 'Email tidak valid' : '',
-  pesan: form.value.pesan.trim().length < 10 ? 'Pesan minimal 10 karakter' : ''
-}))
-
-const formValid = computed(() => !Object.values(error.value).some(Boolean))
-
-// --- Modal ---
-const modalEl = ref(null)
-let modal = null
-
-onMounted(() => {
-  modal = new Modal(modalEl.value)
-})
-
-onBeforeUnmount(() => {
-  modal?.dispose()
-})
-
-function kirim() {
-  sudahKirim.value = true
-  if (!formValid.value) return
-  modal.show()
-}
-
-function resetForm() {
-  form.value = { nama: '', email: '', pesan: '' }
-  sudahKirim.value = false
-  modal.hide()
+const info = {
+  judul: 'Tentang INSA Care',
+  subjudul: 'Melayani dengan sepenuh hati',
+  paragraf: [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  ],
+  poin: ['Lorem ipsum dolor sit', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor'],
+  judulHome: 'Why Home Is Better?',
+  subjudulHome: 'Kenyamanan dan Kesehatan',
+  paragrafHome: [
+    'Rumah adalah tempat ternyaman untuk mendapatkan perawatan. Dengan lingkungan yang familiar, pasien tetap dekat dengan keluarga dan menjalani rutinitas dengan lebih nyaman. Pemulihan bukan hanya tentang tindakan medis. Dukungan keluarga, suasana yang tenang, dan kenyamanan rumah turut membantu proses pemulihan.',
+    'Tidak perlu sering bepergian untuk mendapatkan perawatan. Layanan kesehatan di rumah membantu mengurangi kelelahan dan membuat pasien lebih nyaman selama masa perawatan.',
+    'Kelebihan perawatan di rumah ?'
+  ],
+  poinHome: ['Tempat tidur sendiri', 'Rutinitas tetap terjaga', 'Lingkungan lebih nyaman', 'Dekat keluarga dan teman', 'Waktu lebih fleksibel', ' Tidak perlu sering bepergian']
 }
 </script>
 
 <template>
-  <div class="mx-auto" style="max-width: 600px">
-    <h1 class="text-center mb-2">Tentang Kami</h1>
-    <p class="text-center text-muted mb-4">Ini adalah halaman about.</p>
+  <PageHeader v-if="$route.meta.judul" :judul="$route.meta.judul" :breadcrumb="$route.meta.breadcrumb" />
 
-    <!-- Card: counter -->
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header fw-semibold">Counter</div>
-      <div class="card-body text-center">
-        <p class="display-6 mb-3">{{ jumlah }}</p>
-        <div class="d-flex gap-2 justify-content-center flex-wrap">
-          <button class="btn btn-primary" @click="jumlah++">Tambah</button>
-          <button class="btn btn-outline-secondary" @click="jumlah--" :disabled="jumlah === 0">
-            Kurang
-          </button>
-          <button class="btn btn-danger" @click="jumlah = 0">Reset</button>
-        </div>
+  <div class="container py-5">
+    <!-- Row informasi usaha -->
+    <section class="row align-items-center g-4 py-4">
+      <!-- Kolom teks (7/12) -->
+      <div class="col-md-7">
+        <h6 class="text-uppercase text-primary fw-semibold">{{ info.subjudul }}</h6>
+        <h2 class="fw-bold mb-3">{{ info.judul }}</h2>
+
+        <p v-for="(p, i) in info.paragraf" :key="i" class="text-muted">
+          {{ p }}
+        </p>
+
+        <ul class="list-unstyled mb-4">
+          <li v-for="item in info.poin" :key="item" class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>{{ item }}
+          </li>
+        </ul>
+
+        <RouterLink to="/about" class="btn btn-primary">Selengkapnya</RouterLink>
       </div>
-    </div>
 
-    <!-- Card: form -->
-    <div class="card shadow-sm">
-      <div class="card-header fw-semibold">Hubungi Kami</div>
-      <div class="card-body">
-        <form @submit.prevent="kirim" novalidate>
-          <div class="mb-3">
-            <label for="nama" class="form-label">Nama</label>
-            <input
-              id="nama"
-              v-model="form.nama"
-              type="text"
-              class="form-control"
-              :class="{ 'is-invalid': sudahKirim && error.nama }"
-              placeholder="Nama lengkap"
-            />
-            <div class="invalid-feedback">{{ error.nama }}</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              id="email"
-              v-model="form.email"
-              type="email"
-              class="form-control"
-              :class="{ 'is-invalid': sudahKirim && error.email }"
-              placeholder="nama@email.com"
-            />
-            <div class="invalid-feedback">{{ error.email }}</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="pesan" class="form-label">Pesan</label>
-            <textarea
-              id="pesan"
-              v-model="form.pesan"
-              rows="4"
-              class="form-control"
-              :class="{ 'is-invalid': sudahKirim && error.pesan }"
-              placeholder="Tulis pesan Anda"
-            ></textarea>
-            <div class="invalid-feedback">{{ error.pesan }}</div>
-          </div>
-
-          <button type="submit" class="btn btn-primary w-100">Kirim</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" tabindex="-1" ref="modalEl">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Pesan Terkirim</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            <p class="mb-1">Terima kasih, <strong>{{ form.nama }}</strong>!</p>
-            <p class="mb-0 text-muted">Kami akan membalas ke {{ form.email }}.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-              Tutup
-            </button>
-            <button type="button" class="btn btn-primary" @click="resetForm">
-              Kirim Lagi
-            </button>
+      <!-- Kolom gambar/kartu (5/12) -->
+      <div class="col-md-5">
+        <div class="card shadow-sm border-0">
+          <!-- Ganti dengan gambar Anda, misalnya: <img src="@/assets/usaha.jpg" class="card-img-top" alt="Usaha"> -->
+          <!-- <div class="ratio ratio-4x3 bg-secondary-subtle rounded-top d-flex align-items-center justify-content-center">
+            <i class="bi bi-image fs-1 text-secondary"></i>
+          </div> -->
+          <img src="https://placehold.co/600x400" class="card-img-top" alt="Usaha">
+          <div class="card-body">
+            <h5 class="card-title">Lorem Ipsum</h5>
+            <p class="card-text text-muted mb-0">
+              Dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>

@@ -30,8 +30,8 @@ onBeforeUnmount(() => document.removeEventListener('click', klikLuar))
   <nav class="navbar navbar-expand-lg insa-navbar">
     <div class="container">
       <!-- Logo (sementara teks, ganti dengan <img> kalau sudah ada) -->
-      <RouterLink class="navbar-brand fw-bold" to="/">
-        <span style="color: #1f2547">INSA</span><span style="color: #4a8c6f">care</span>
+      <RouterLink class="navbar-brand brand" to="/">
+        <img src="@/assets/images/logo.png" alt="INSAcare" class="brand-logo" />
       </RouterLink>
 
       <!-- Tombol hamburger -->
@@ -60,15 +60,15 @@ onBeforeUnmount(() => document.removeEventListener('click', klikLuar))
               Services
             </a>
             <ul class="dropdown-menu" :class="{ show: dropdownBuka }">
-              <li><RouterLink class="dropdown-item" to="/about">Care At Home</RouterLink></li>
-              <li><RouterLink class="dropdown-item" to="/about">Group Care</RouterLink></li>
-              <li><RouterLink class="dropdown-item" to="/about">Event Medical Support</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/service/care-at-home">Care At Home</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/service/group-care">Group Care</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/service/event-medical-support">Event Medical Support</RouterLink></li>
             </ul>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <RouterLink class="nav-link" to="/about">How It Works</RouterLink>
-          </li>
+          </li> -->
           <li class="nav-item">
             <RouterLink class="nav-link" to="/about">FAQ</RouterLink>
           </li>
