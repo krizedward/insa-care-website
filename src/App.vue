@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue'
 import FooterBar from './components/FooterBar.vue'
+import WhatsAppFloat from './components/WhatsAppFloat.vue'
 </script>
 
 <!-- <template>
@@ -21,6 +22,8 @@ import FooterBar from './components/FooterBar.vue'
   </main>
   
   <FooterBar />
+
+  <WhatsAppFloat />
 </template>
 
 <style scoped>

@@ -19,7 +19,7 @@ const info = {
 
 <template>
   <section class="why-section py-5">
-    <div class="row g-5">
+    <div class="row gy-4 gx-md-5">
       <!-- Gambar kiri -->
       <div class="col-md-5">
         <img src="https://placehold.co/1200x400" alt="Perawatan di rumah" class="why-img" />

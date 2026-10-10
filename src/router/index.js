@@ -18,6 +18,11 @@ const routes = [
     path: '/service/event-medical-support', name: 'event-medical-support', 
     component: () => import('../views/EventMedicalView.vue'),
     meta: { judul: 'Event Medical View', breadcrumb: [{ label: 'Home', to: '/' }, { label: 'Services', to: '/services' }, { label: 'Event Medical View' }] }
+  },
+  {
+    path: '/frequently-asked-questions', name: 'faq', 
+    component: () => import('../views/FaqView.vue'),
+    meta: { judul: 'FAQ', breadcrumb: [{ label: 'Home', to: '/' }, { label: 'FAQ' }] }
   }
 ]
 

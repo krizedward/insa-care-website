@@ -70,13 +70,13 @@ onBeforeUnmount(() => document.removeEventListener('click', klikLuar))
             <RouterLink class="nav-link" to="/about">How It Works</RouterLink>
           </li> -->
           <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">FAQ</RouterLink>
+            <RouterLink class="nav-link" to="/frequently-asked-questions">FAQ</RouterLink>
           </li>
 
           <!-- Tombol -->
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <!-- <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
             <a href="#" class="btn btn-appointment">Appointment</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>

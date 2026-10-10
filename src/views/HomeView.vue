@@ -3,6 +3,8 @@ import ServiceSection from '../components/ServiceSection.vue'
 import ProfessionalSection from '../components/ProfessionalSection.vue'
 import BannerSection from '../components/BannerSection.vue'
 import WhyHomeSection from '../components/WhyHomeSection.vue'
+import PartnershipCta from '../components/PartnershipCtaSection.vue'
+import OurPartners from '../components/OurPartnersSection.vue'
 
 const info = {
   judul: 'Tentang INSA Care',
@@ -48,6 +50,14 @@ const info = {
 
   <div class="container py-4">
     <ProfessionalSection />
+  </div>
+
+  <div class="container py-4">
+    <PartnershipCta />
+  </div>
+
+  <div class="container py-4">
+    <OurPartners />
   </div>
 
 </template>
