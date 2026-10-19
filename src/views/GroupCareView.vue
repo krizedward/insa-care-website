@@ -150,14 +150,7 @@ const struktur = {
 
     <!-- Scalable Service Structure -->
     <div v-if="tampilkanStruktur" class="container py-5">
-      <div class="text-center mb-4">
-        <h6 class="group-label text-uppercase fw-bold">Scalable Service Structure</h6>
-        <p class="group-text mx-auto mb-0" style="max-width: 680px">
-          Untuk tahap awal, Corporate dan Education berada dalam satu kategori utama. Seiring
-          bertambahnya volume, kebutuhan, dan program layanan, struktur ini dapat dikembangkan.
-        </p>
-      </div>
-
+      
       <!-- Tahap awal -->
       <div class="struktur-box struktur-awal mx-auto text-center">
         <h5 class="fw-bold mb-1">{{ struktur.awal.judul }}</h5>

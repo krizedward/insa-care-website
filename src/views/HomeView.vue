@@ -3,8 +3,13 @@ import ServiceSection from '../components/ServiceSection.vue'
 import ProfessionalSection from '../components/ProfessionalSection.vue'
 import BannerSection from '../components/BannerSection.vue'
 import WhyHomeSection from '../components/WhyHomeSection.vue'
-import PartnershipCta from '../components/PartnershipCtaSection.vue'
 import OurPartners from '../components/OurPartnersSection.vue'
+import PageBanner from '../components/PageBanner.vue'
+
+import banner1 from '../assets/images/slider/s-1.png'
+import banner2 from '../assets/images/slider/s-2.png'
+import banner3 from '../assets/images/slider/s-3.png'
+// import banner3 from '../assets/images/slider/s-3.png'
 
 const info = {
   judul: 'Tentang INSA Care',
@@ -23,6 +28,24 @@ const info = {
   ],
   poinHome: ['Tempat tidur sendiri', 'Rutinitas tetap terjaga', 'Lingkungan lebih nyaman', 'Dekat keluarga dan teman', 'Waktu lebih fleksibel', ' Tidak perlu sering bepergian']
 }
+
+const slides = [
+  {
+    gambar: banner1,
+    judul: 'Perawatan Profesional di Rumah Anda',
+    subjudul: 'Dokter, perawat, bidan, dan fisioterapi siap datang ke rumah.'
+  },
+  {
+    gambar: banner2,
+    judul: 'Layanan Kesehatan untuk Sekolah & Perusahaan',
+    subjudul: 'Vaksinasi, skrining, dan edukasi kesehatan langsung di lokasi.'
+  },
+  {
+    gambar: banner3,
+    judul: 'Dukungan Medis untuk Acara Anda',
+    subjudul: 'Tenaga kesehatan siaga untuk keselamatan peserta dan tamu.'
+  }
+]
 </script>
 
 <!-- <template>
@@ -34,11 +57,17 @@ const info = {
 
 <template>
 
-  <BannerSection
+  <!-- <BannerSection
     judul="INSA Care"
     subjudul="Professional Care, Closer to You."
     src="https://placehold.co/1200x400"
-    tinggi="400px"/>
+    tinggi="400px"/> -->
+  
+  <PageBanner :slides="slides" tinggi="520px">
+    <RouterLink to="/care-at-home" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">
+      Lihat Layanan
+    </RouterLink>
+  </PageBanner>
   
   <div class="container py-4">
     <ServiceSection />
@@ -50,10 +79,6 @@ const info = {
 
   <div class="container py-4">
     <ProfessionalSection />
-  </div>
-
-  <div class="container py-4">
-    <PartnershipCta />
   </div>
 
   <div class="container py-4">

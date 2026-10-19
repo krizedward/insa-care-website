@@ -4,23 +4,27 @@ const tahun = new Date().getFullYear()
 const menu = [
   { label: 'Home', to: '/' },
   { label: 'About INSA', to: '/about' },
-  { label: 'How It Works', to: '/about' },
-  { label: 'FAQ', to: '/about' }
+  { label: 'Services', to: '/about' },
+  { label: 'FAQ', to: '/frequently-asked-questions' }
 ]
 
-const layanan = ['Care At Home', 'Group Care', 'Event Medical Support']
+const layanan = [
+  { label: 'Care at Home', to: '/service/care-at-home' },
+  { label: 'Group Care', to: '/service/group-care' },
+  { label: 'Event Medical Support', to: '/service/event-medical-support' }
+]
 
 const kontak = [
-  { ikon: 'bi-geo-alt-fill', teks: 'Jl. Contoh No. 123, Malang, Jawa Timur' },
-  { ikon: 'bi-telephone-fill', teks: '+62 812-3456-7890' },
-  { ikon: 'bi-envelope-fill', teks: 'info@insacare.com' }
+  { ikon: 'bi-geo-alt-fill', teks: 'Jl. Keputih Tegal No.36C, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111, Indonesia' },
+  { ikon: 'bi-telephone-fill', teks: '+62 889-8984-7142' },
+  { ikon: 'bi-envelope-fill', teks: 'michaelhadinata02@gmail.com' }
 ]
 
 const sosmed = [
-  { ikon: 'bi-instagram', url: '#' },
-  { ikon: 'bi-facebook', url: '#' },
-  { ikon: 'bi-whatsapp', url: '#' },
-  { ikon: 'bi-youtube', url: '#' }
+  { ikon: 'bi-instagram', url: 'https://www.instagram.com/drmichaelhadee' },
+  { ikon: 'bi-facebook', url: 'https://www.facebook.com/MichaelHadinata02' },
+  { ikon: 'bi-tiktok', url: 'https://www.tiktok.com/@dr.michaelhadinata' },
+  { ikon: 'bi-youtube', url: 'https://www.youtube.com/@otorock4x4' }
 ]
 </script>
 
@@ -65,8 +69,8 @@ const sosmed = [
         <div class="col-6 col-md-3 col-lg-3">
           <h6 class="footer-heading">Services</h6>
           <ul class="list-unstyled mb-0">
-            <li v-for="l in layanan" :key="l" class="mb-2">
-              <a href="#" class="footer-link">{{ l }}</a>
+            <li v-for="l in layanan" :key="l.label" class="mb-2">
+              <RouterLink :to="l.to" class="footer-link">{{ l.label }}</RouterLink>
             </li>
           </ul>
         </div>

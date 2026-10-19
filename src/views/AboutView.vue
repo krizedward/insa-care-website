@@ -3,9 +3,10 @@ import { computed, ref } from 'vue'
 import PageHeader from '../components/PageHeaderSection.vue'
 import ProfessionalSection from '../components/ProfessionalSection.vue'
 import WhyInsa from '../components/WhyInsaSection.vue'
+import PartnershipCta from '../components/PartnershipCtaSection.vue'
 
 /* ---------- Update #2 ---------- */
-const nomorWA = '62812xxxxxxx'
+const nomorWA = '6288989847142'
 const linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(
   'Halo INSAcare, saya ingin bertanya tentang layanan kesehatan.'
 )}`
@@ -25,10 +26,10 @@ const tentang = {
 // foto: new URL('../assets/dr-michael.jpg', import.meta.url).href
 // Selama kosong, tampil inisial (bukan foto palsu).
 const dokter = {
-  nama: 'Dr. Michael Hadinata, M.Kes, SIP',
+  nama: 'dr. Michael Hadinata, M.Kes., KMK., CHLQM',
   peran: 'General Practitioner',
   inisial: 'MH',
-  foto: ''
+  foto: new URL('../assets/images/dr_michael.jpg', import.meta.url).href
 }
 
 /* ---------- Our Care Partners (isi hanya jika sudah benar-benar bekerja sama) ---------- */
@@ -44,9 +45,9 @@ const urutanPeran = [
 // Contoh:
 // { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href }
 const carePartners = [
-  { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href },
-  { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href },
-  { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href }
+  // { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href },
+  // { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href },
+  // { nama: 'Nama Tenaga Kesehatan', peran: 'Nurses', jabatan: 'Registered Nurse', foto: new URL('../assets/team/nama.jpg', import.meta.url).href }
 ]
 
 const aktif = ref('Semua')
@@ -61,13 +62,13 @@ const tampil = computed(() =>
 )
 /* ---------- Update #1 ---------- */
 const info = {
-  judul: 'Tentang INSA Care',
+  judul: 'Solusi Homecare untuk Anda',
   subjudul: 'Melayani dengan sepenuh hati',
   paragraf: [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+    'Merawat orang tercinta kini lebih mudah bersama INSA Care. Kami hadir membantu Anda mendapatkan layanan perawatan kesehatan di rumah yang nyaman, praktis, dan sesuai kebutuhan, tanpa harus selalu pergi ke fasilitas kesehatan.',
+    'Kami memahami bahwa menemukan pendamping dan tenaga kesehatan yang tepat untuk orang tercinta bukanlah hal yang mudah. Karena itu, INSA Care hadir untuk membantu Anda dan keluarga menjalani proses perawatan dengan lebih tenang, melalui layanan homecare yang mengutamakan kepedulian, kenyamanan, dan kualitas pelayanan.'
   ],
-  poin: ['Lorem ipsum dolor sit', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor'],
+  poin: ['Solusi perawatan kesehatan langsung di tempat', 'Layanan yang menyesuaikan kebutuhan pasien', 'Pendampingan dengan mengutamakan kenyamanan dan kepedulian'],
   judulHome: 'Why Home Is Better?',
   subjudulHome: 'Kenyamanan dan Kesehatan',
   paragrafHome: [
@@ -100,23 +101,19 @@ const info = {
           </li>
         </ul>
 
-        <RouterLink to="/about" class="btn btn-primary">Selengkapnya</RouterLink>
+        <!-- <RouterLink to="/about" class="btn btn-primary">Selengkapnya</RouterLink> -->
       </div>
 
       <!-- Kolom gambar/kartu (5/12) -->
+      
+
       <div class="col-md-5">
-        <div class="card shadow-sm border-0">
-          <!-- Ganti dengan gambar Anda, misalnya: <img src="@/assets/usaha.jpg" class="card-img-top" alt="Usaha"> -->
-          <!-- <div class="ratio ratio-4x3 bg-secondary-subtle rounded-top d-flex align-items-center justify-content-center">
-            <i class="bi bi-image fs-1 text-secondary"></i>
-          </div> -->
-          <img src="https://placehold.co/600x400" class="card-img-top" alt="Usaha">
-          <div class="card-body">
-            <h5 class="card-title">Lorem Ipsum</h5>
-            <p class="card-text text-muted mb-0">
-              Dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
+        <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+          <img
+            src="../assets/images/about_logo_insacare.jpeg"
+            class="card-img-top"
+            alt="INSA Care"
+          />
         </div>
       </div>
     </section>
@@ -159,7 +156,7 @@ const info = {
               perhatian pada keselamatan dan kebutuhan pasien.
             </p>
 
-            <RouterLink to="/care-at-home" class="btn btn-appointment">Our Services</RouterLink>
+            <RouterLink to="/care-at-home" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">Our Services</RouterLink>
           </div>
         </div>
       </div>
@@ -205,6 +202,10 @@ const info = {
 
     <div class="container py-4">
       <WhyInsa />
+    </div>
+
+    <div class="container py-4">
+      <PartnershipCta />
     </div>
 
     <!-- CTA -->

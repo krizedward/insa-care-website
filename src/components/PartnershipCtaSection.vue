@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const nomorWA = '62812xxxxxxx'
+const nomorWA = '6288989847142'
 const linkPartner = `https://wa.me/${nomorWA}?text=${encodeURIComponent(
   'Halo INSAcare, kami tertarik untuk menjalin kerja sama (partnership).'
 )}`
@@ -64,7 +64,7 @@ function akhiriDrag() {
           :href="linkPartner"
           target="_blank"
           rel="noopener"
-          class="btn btn-partner btn-lg rounded-pill px-5 fw-bold"
+          class="btn btn-primary btn-lg rounded-pill px-5 fw-bold"
         >
           Partner with INSA <i class="bi bi-arrow-right ms-1"></i>
         </a>

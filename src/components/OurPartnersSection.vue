@@ -27,23 +27,35 @@ const urutanKategori = [
 const partner = [
   //
   {
-    nama: 'Nama Organisasi',
+    nama: 'Lilroar Daycare',
     kategori: 'Schools',
-    logo: new URL('../assets/partners/nama-organisasi.png', import.meta.url).href,
-    url: 'https://contoh.com' // opsional
+    logo: new URL('../assets/images/partner/logo_lilroar_daycare.png', import.meta.url).href,
+    // url: 'https://contoh.com' // opsional
   },
   {
-    nama: 'Nama Organisasi',
+    nama: 'Ambas School',
     kategori: 'Schools',
-    logo: new URL('../assets/partners/nama-organisasi.png', import.meta.url).href,
-    url: 'https://contoh.com' // opsional
+    logo: new URL('../assets/images/partner/logo_ambas_school.png', import.meta.url).href,
+    // url: 'https://contoh.com' // opsional
   },
   {
-    nama: 'Nama Organisasi',
-    kategori: 'Schools',
-    logo: new URL('../assets/partners/nama-organisasi.png', import.meta.url).href,
-    url: 'https://contoh.com' // opsional
+    nama: 'Kedai Ampyang',
+    kategori: 'Companies',
+    logo: new URL('../assets/images/partner/logo_kedai_ampyang.png', import.meta.url).href,
+    // url: 'https://contoh.com' // opsional
+  },
+  {
+    nama: 'Wahana',
+    kategori: 'Companies',
+    logo: new URL('../assets/images/partner/logo_wahana.png', import.meta.url).href,
+    // url: 'https://contoh.com' // opsional
   }
+  // {
+  //   nama: 'Nama Organisasi',
+  //   kategori: 'Schools',
+  //   logo: new URL('../assets/partner/logo_ambas_school.png', import.meta.url).href,
+  //   url: 'https://contoh.com' // opsional
+  // }
 ]
 
 const aktif = ref('Semua')

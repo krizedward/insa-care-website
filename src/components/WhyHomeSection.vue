@@ -22,12 +22,12 @@ const info = {
     <div class="row gy-4 gx-md-5">
       <!-- Gambar kiri -->
       <div class="col-md-5">
-        <img src="https://placehold.co/1200x400" alt="Perawatan di rumah" class="why-img" />
+        <img src="../assets/images/about-2.jpg" alt="Perawatan di rumah" class="why-img" />
       </div>
 
       <!-- Teks kanan -->
       <div class="col-md-7 d-flex flex-column">
-        <h6 class="text-uppercase text-primary fw-semibold"> info.subjudulHome </h6>
+        <h6 class="text-uppercase text-primary fw-semibold"> Professional Care, Closer to You </h6>
         <h2 class="why-title fw-bold mb-4">{{ info.judul }}</h2>
 
         <p v-for="(p, i) in info.paragraf" :key="i" class="why-text mb-4">
@@ -48,7 +48,7 @@ const info = {
 
         <!-- Tombol full, menempel di bagian bawah kolom -->
         <RouterLink to="/about" class="btn btn-primary w-100 mt-auto">
-          Selengkapnya
+          Tentang INSA Care
         </RouterLink>
       </div>
     </div>

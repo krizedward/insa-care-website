@@ -1,19 +1,22 @@
 <script setup>
 const layanan = [
   {
-    judul: 'Baby Care',
-    deskripsi: 'Perawatan penuh perhatian untuk bayi dan anak kecil.',
-    ikon: 'bi-person-arms-up'
+    judul: 'Care At Home',
+    deskripsi: 'Healthcare for individuals & families.',
+    ikon: 'bi-house-heart',
+    to: '/care-at-home'
   },
   {
-    judul: 'Adult Care',
-    deskripsi: 'Perawatan untuk dewasa dengan kebutuhan khusus.',
-    ikon: 'bi-person-fill'
+    judul: 'Group Care',
+    deskripsi: 'Healthcare services for companies, schools and groups.',
+    ikon: 'bi-buildings',
+    to: '/group-care'
   },
   {
-    judul: 'Elderly Care',
-    deskripsi: 'Perawatan untuk lansia dengan kebutuhan medis yang spesifik.',
-    ikon: 'bi-people-fill'
+    judul: 'Event Medical Support',
+    deskripsi: 'Healthcare support for selected events.',
+    ikon: 'bi-calendar2-heart',
+    to: '/event-medical-support'
   }
 ]
 </script>
@@ -22,8 +25,8 @@ const layanan = [
   <section class="service-section py-5">
     <!-- Judul -->
     <div class="text-center mb-5">
-      <h6 class="service-label text-uppercase fw-bold">We Are Care</h6>
-      <h2 class="service-title fw-bold">For Every Generation.</h2>
+      <h6 class="service-label text-uppercase fw-bold">Our Care</h6>
+      <h2 class="service-title fw-bold">Who We Care For</h2>
     </div>
 
     <!-- 3 kolom -->
@@ -58,6 +61,7 @@ const layanan = [
 .service-title {
   color: var(--navy);
   font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
 }
 
 .service-name {

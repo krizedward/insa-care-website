@@ -3,19 +3,19 @@
 const layanan = [
   {
     judul: 'Doctor Home Visit',
-    gambar: new URL('../assets/services/doctor.jpg', import.meta.url).href
+    gambar: new URL('../assets/images/department-items-1.jpg', import.meta.url).href
   },
   {
     judul: 'Nursing Care Home Visit',
-    gambar: new URL('../assets/services/nurse.jpg', import.meta.url).href
+    gambar: new URL('../assets/images/department-items-2.jpg', import.meta.url).href
   },
   {
     judul: 'Midwife Services',
-    gambar: new URL('../assets/services/midwife.jpg', import.meta.url).href
+    gambar: new URL('../assets/images/department-items-3.jpg', import.meta.url).href
   },
   {
     judul: 'Physiotherapy Home Visit',
-    gambar: new URL('../assets/services/physio.jpg', import.meta.url).href
+    gambar: new URL('../assets/images/department-items-4.jpg', import.meta.url).href
   }
 ]
 </script>
@@ -32,7 +32,7 @@ const layanan = [
     <div class="row g-4">
       <div v-for="item in layanan" :key="item.judul" class="col-12 col-sm-6 col-lg-3">
         <div class="pro-card h-100">
-          <img src="https://placehold.co/600x400" :alt="item.judul" class="pro-img" />
+          <img :src="item.gambar" :alt="item.judul" class="pro-img" />
           <div class="pro-body">
             <h5 class="pro-name fw-bold mb-0">{{ item.judul }}</h5>
           </div>

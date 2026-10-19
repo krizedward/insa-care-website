@@ -1,7 +1,7 @@
 <script setup>
 // Format nomor: kode negara tanpa "+" dan tanpa 0 di depan (0812... jadi 62812...)
-const nomor = '62812xxxxxxx'
-const pesan = 'Halo INSAcare, saya ingin bertanya tentang layanan kesehatan.'
+const nomor = '6288989847142'
+const pesan = 'Hallo, saya ingin bertanya tentang INSA Care.'
 
 const link = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`
 </script>
