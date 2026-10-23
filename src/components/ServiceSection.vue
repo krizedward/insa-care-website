@@ -1,38 +1,38 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 const layanan = [
   {
     judul: 'Care At Home',
     deskripsi: 'Healthcare for individuals & families.',
     ikon: 'bi-house-heart',
-    to: '/care-at-home'
+    to: '/services/care-at-home'
   },
   {
     judul: 'Group Care',
     deskripsi: 'Healthcare services for companies, schools and groups.',
     ikon: 'bi-buildings',
-    to: '/group-care'
+    to: '/services/group-care'
   },
   {
     judul: 'Event Medical Support',
     deskripsi: 'Healthcare support for selected events.',
     ikon: 'bi-calendar2-heart',
-    to: '/event-medical-support'
+    to: '/services/event-medical-support'
   }
 ]
 </script>
 
 <template>
   <section class="service-section py-5">
-    <!-- Judul -->
     <div class="text-center mb-5">
       <h6 class="service-label text-uppercase fw-bold">Our Care</h6>
       <h2 class="service-title fw-bold">Who We Care For</h2>
     </div>
 
-    <!-- 3 kolom -->
     <div class="row g-4">
       <div v-for="item in layanan" :key="item.judul" class="col-12 col-md-4">
-        <div class="d-flex align-items-start gap-3">
+        <RouterLink :to="item.to" class="service-link d-flex align-items-start gap-3">
           <div class="service-icon flex-shrink-0">
             <i class="bi" :class="item.ikon"></i>
           </div>
@@ -40,7 +40,7 @@ const layanan = [
             <h5 class="service-name fw-bold mb-2">{{ item.judul }}</h5>
             <p class="service-desc mb-0">{{ item.deskripsi }}</p>
           </div>
-        </div>
+        </RouterLink>
       </div>
     </div>
   </section>
@@ -67,6 +67,7 @@ const layanan = [
 .service-name {
   color: var(--navy);
   font-size: 1.4rem;
+  transition: color 0.2s;
 }
 
 .service-desc {
@@ -74,7 +75,15 @@ const layanan = [
   line-height: 1.8;
 }
 
-/* Kotak ikon */
+.service-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-link:hover .service-name {
+  color: var(--hijau);
+}
+
 .service-icon {
   width: 72px;
   height: 72px;
@@ -86,11 +95,12 @@ const layanan = [
   background: #fff;
   color: var(--hijau);
   font-size: 2.3rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
-.service-icon:hover {
+.service-link:hover .service-icon {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--hijau);
 }
 </style>

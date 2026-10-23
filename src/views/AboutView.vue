@@ -16,7 +16,7 @@ const tentang = {
   label: 'About INSA Care',
   judul: 'Healthcare That Grows From Real Medical Practice',
   paragraf: [
-    'INSA Care saat ini berkembang dari praktik dr. Michael Hadinata, M.Kes, SIP.',
+    'INSA Care saat ini berkembang dari praktik dr. Michael Hadinata, M.Kes., KMK., CHLQM.',
     'Fondasi medis tersebut menjadi dasar bagi INSA Care dalam menghadirkan layanan kesehatan profesional yang lebih dekat dengan keluarga, organisasi, dan komunitas.'
   ]
 }
@@ -156,7 +156,7 @@ const info = {
               perhatian pada keselamatan dan kebutuhan pasien.
             </p>
 
-            <RouterLink to="/care-at-home" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">Our Services</RouterLink>
+            <RouterLink to="/services" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">Our Services</RouterLink>
           </div>
         </div>
       </div>

@@ -64,7 +64,7 @@ const slides = [
     tinggi="400px"/> -->
   
   <PageBanner :slides="slides" tinggi="520px">
-    <RouterLink to="/care-at-home" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">
+    <RouterLink to="/services" class="btn btn-light btn-lg rounded-pill px-4 fw-bold">
       Lihat Layanan
     </RouterLink>
   </PageBanner>

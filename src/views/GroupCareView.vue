@@ -97,14 +97,7 @@ const struktur = {
 </script>
 
 <template>
-  <PageHeader
-    judul="Group Care"
-    :breadcrumb="[
-      { label: 'Home', to: '/' },
-      { label: 'Services' },
-      { label: 'Group Care' }
-    ]"
-  />
+  <PageHeader v-if="$route.meta.judul" :judul="$route.meta.judul" :breadcrumb="$route.meta.breadcrumb" />
   <!-- tambahkan :gambar="bannerGroup" jika sudah ada gambar -->
 
   <section class="group-page">

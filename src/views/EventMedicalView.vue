@@ -76,14 +76,8 @@ const faktor = [
 </script>
 
 <template>
-  <PageHeader
-    judul="Event Medical Support"
-    :breadcrumb="[
-      { label: 'Home', to: '/' },
-      { label: 'Services' },
-      { label: 'Event Medical Support' }
-    ]"
-  />
+  <PageHeader v-if="$route.meta.judul" :judul="$route.meta.judul" :breadcrumb="$route.meta.breadcrumb" />
+  
   <!-- tambahkan :gambar="bannerEvent" jika sudah ada gambar -->
 
   <section class="event-page">

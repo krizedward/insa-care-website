@@ -60,9 +60,9 @@ onBeforeUnmount(() => document.removeEventListener('click', klikLuar))
               Services
             </a>
             <ul class="dropdown-menu" :class="{ show: dropdownBuka }">
-              <li><RouterLink class="dropdown-item" to="/service/care-at-home">Care At Home</RouterLink></li>
-              <li><RouterLink class="dropdown-item" to="/service/group-care">Group Care</RouterLink></li>
-              <li><RouterLink class="dropdown-item" to="/service/event-medical-support">Event Medical Support</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/services/care-at-home">Care At Home</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/services/group-care">Group Care</RouterLink></li>
+              <li><RouterLink class="dropdown-item" to="/services/event-medical-support">Event Medical Support</RouterLink></li>
             </ul>
           </li>
 
