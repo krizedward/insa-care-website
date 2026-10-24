@@ -1,9 +1,9 @@
 <script setup>
 import { computed, ref } from 'vue'
 import PageHeader from '../components/PageHeaderSection.vue'
-import ProfessionalSection from '../components/ProfessionalSection.vue'
-import WhyInsa from '../components/WhyInsaSection.vue'
-import PartnershipCta from '../components/PartnershipCtaSection.vue'
+import ProfessionalSection from '../sections/home/ProfessionalSection.vue'
+import WhyInsa from '../sections/home/WhyInsaSection.vue'
+import PartnershipCta from '../sections/home/PartnershipCtaSection.vue'
 
 /* ---------- Update #2 ---------- */
 const nomorWA = '6288989847142'

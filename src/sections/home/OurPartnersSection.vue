@@ -29,25 +29,25 @@ const partner = [
   {
     nama: 'Lilroar Daycare',
     kategori: 'Schools',
-    logo: new URL('../assets/images/partner/logo_lilroar_daycare.png', import.meta.url).href,
+    logo: new URL('../../assets/images/partner/logo_lilroar_daycare.png', import.meta.url).href,
     // url: 'https://contoh.com' // opsional
   },
   {
     nama: 'Ambas School',
     kategori: 'Schools',
-    logo: new URL('../assets/images/partner/logo_ambas_school.png', import.meta.url).href,
+    logo: new URL('../../assets/images/partner/logo_ambas_school.png', import.meta.url).href,
     // url: 'https://contoh.com' // opsional
   },
   {
     nama: 'Kedai Ampyang',
     kategori: 'Companies',
-    logo: new URL('../assets/images/partner/logo_kedai_ampyang.png', import.meta.url).href,
+    logo: new URL('../../assets/images/partner/logo_kedai_ampyang.png', import.meta.url).href,
     // url: 'https://contoh.com' // opsional
   },
   {
     nama: 'Wahana',
     kategori: 'Companies',
-    logo: new URL('../assets/images/partner/logo_wahana.png', import.meta.url).href,
+    logo: new URL('../../assets/images/partner/logo_wahana.png', import.meta.url).href,
     // url: 'https://contoh.com' // opsional
   }
   // {

@@ -1,7 +1,7 @@
 <script setup>
-import NavBar from './components/NavBar.vue'
-import FooterBar from './components/FooterBar.vue'
-import WhatsAppFloat from './components/WhatsAppFloat.vue'
+import NavBar from './components/layouts/NavBar.vue'
+import FooterBar from './components/layouts/FooterBar.vue'
+import WhatsAppFloat from './components/navigation/WhatsAppFloat.vue'
 </script>
 
 <!-- <template>

@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import PageHeader from '../components/PageHeaderSection.vue'
-import ServiceSection from '../components/ServiceSection.vue'
+import ServiceSection from '../sections/home/ServiceSection.vue'
 
 </script>
 

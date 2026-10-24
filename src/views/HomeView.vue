@@ -1,9 +1,9 @@
 <script setup>
-import ServiceSection from '../components/ServiceSection.vue'
-import ProfessionalSection from '../components/ProfessionalSection.vue'
+import ServiceSection from '../sections/home/ServiceSection.vue'
+import ProfessionalSection from '../sections/home/ProfessionalSection.vue'
 import BannerSection from '../components/BannerSection.vue'
-import WhyHomeSection from '../components/WhyHomeSection.vue'
-import OurPartners from '../components/OurPartnersSection.vue'
+import WhyHomeSection from '../sections/home/WhyHomeSection.vue'
+import OurPartners from '../sections/home/OurPartnersSection.vue'
 import PageBanner from '../components/PageBanner.vue'
 
 import banner1 from '../assets/images/slider/s-1.png'

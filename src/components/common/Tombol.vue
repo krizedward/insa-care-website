@@ -37,3 +37,15 @@ const kelas = computed(() => [
 - <slot> membuat teks tombol bisa diisi bebas, dengan teks default "Tombol".
 - Event @click otomatis diteruskan ke elemen <button>, jadi tidak perlu defineEmits. 
 -->
+
+<!-- Note 
+- kalo bisa ditambahkan file seperti ini :
+- BaseButton.vue
+- BaseInput.vue
+- BaseCard.vue
+- BaseSelect.vue
+- BaseModal.vue
+- BaseBadge.vue
+- BaseAlert.vue
+- BaseTable.vue
+-->

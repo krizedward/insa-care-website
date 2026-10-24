@@ -22,7 +22,7 @@ const info = {
     <div class="row gy-4 gx-md-5">
       <!-- Gambar kiri -->
       <div class="col-md-5">
-        <img src="../assets/images/about-2.jpg" alt="Perawatan di rumah" class="why-img" />
+        <img src="../../assets/images/about-2.jpg" alt="Perawatan di rumah" class="why-img" />
       </div>
 
       <!-- Teks kanan -->

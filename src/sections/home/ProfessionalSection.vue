@@ -3,19 +3,19 @@
 const layanan = [
   {
     judul: 'Doctor Home Visit',
-    gambar: new URL('../assets/images/department-items-1.jpg', import.meta.url).href
+    gambar: new URL('../../assets/images/department-items-1.jpg', import.meta.url).href
   },
   {
     judul: 'Nursing Care Home Visit',
-    gambar: new URL('../assets/images/department-items-2.jpg', import.meta.url).href
+    gambar: new URL('../../assets/images/department-items-2.jpg', import.meta.url).href
   },
   {
     judul: 'Midwife Services',
-    gambar: new URL('../assets/images/department-items-3.jpg', import.meta.url).href
+    gambar: new URL('../../assets/images/department-items-3.jpg', import.meta.url).href
   },
   {
     judul: 'Physiotherapy Home Visit',
-    gambar: new URL('../assets/images/department-items-4.jpg', import.meta.url).href
+    gambar: new URL('../../assets/images/department-items-4.jpg', import.meta.url).href
   }
 ]
 </script>
